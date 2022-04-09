@@ -1,0 +1,186 @@
+:root {
+    /* Primary */
+    --cyan: hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+
+    /* Neutral */
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--light-gray);
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    font-size: 1.6rem;
+    height: 100vh;
+}
+
+main {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(59, 59, 59, 0.2);
+    margin: 70px auto;
+    width: 310px;
+}
+
+.col_1 {
+    padding: 26px 23px;
+}
+
+.col_1 .title {
+    color: var(--cyan);
+    font-size: 2rem;
+    letter-spacing: .5px;
+    margin-bottom: 28px;
+}
+
+.col_1 .money_back {
+    color: var(--bright-yellow);
+    font-size: 1.6rem;
+    margin-bottom: 28px;
+}
+
+.col_1 .description {
+    color: var(--grayish-blue);
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.col_2 {
+    background-color: var(--cyan);
+    color: hsl(0, 0%, 100%);
+    padding: 23px;
+}
+
+.col_2 .sub_plan {
+    font-size: 1.7rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 28px;
+}
+
+.col_2 .price {
+    align-items: center;
+    display: flex;
+    margin-bottom: 8px;
+}
+
+.col_2 .price .amount {
+    font-size: 3.1rem;
+    font-weight: 700;
+}
+
+.col_2 .price .time {
+    color: hsla(204, 43%, 93%, .5);
+    margin-left: 12px;
+}
+
+.col_2 .access {
+    margin-bottom: 28px;
+}
+
+.col_2 .signup_btn {
+    background-color: var(--bright-yellow);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 10px 10px rgba(59, 59, 59, 0.2);
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    font-family: 'Karla', sans-serif;
+    font-size: inherit;
+    display: block;
+    padding: 15px 0;
+    width: 100%;
+}
+
+.col_3 {
+    background-color: hsla(179, 62%, 43%, .8);
+    color: hsl(0, 0%, 100%);
+    padding: 23px;
+}
+
+.col_3 h3 {
+    font-size: 1.7rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.col_3 .features {
+    color: hsla(204, 43%, 93%, .9);
+    font-size: 1.4rem;
+    letter-spacing: .5px;
+    line-height: 2rem;
+}
+
+footer {
+    position: sticky;
+    top: 100vh;
+}
+
+footer .attribution {
+    color: var(--grayish-blue);
+    font-size: 1rem;
+    text-align: center;
+}
+
+footer .attribution a {
+    color: var(--grayish-blue);
+    text-decoration: none;
+    transition: color .3s ease-in-out;
+}
+
+footer .attribution a:active,
+footer .attribution a:hover {
+    color: var(--bright-yellow);
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        display: flex;
+        flex-flow: row wrap;
+        margin: 0 auto;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 650px;
+    }
+
+    .col_1 {
+        flex: 0 1 100%;
+    }
+
+    .col_2, .col_3 {
+        flex: 0 1 50%;
+    }
+
+    .col_1, .col_2, .col_3 {
+        padding: 40px;
+    }
+
+    .col_1 .title {
+        margin-bottom: 28px;
+    }
+    
+    .col_1 .money_back {
+        margin-bottom: 12px;
+        font-size: inherit;
+    }
+    
+    .col_1 .description {
+        font-size: inherit;
+        margin-bottom: 10px;
+    }
+}
